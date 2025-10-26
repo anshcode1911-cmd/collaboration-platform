@@ -1,4 +1,4 @@
-```markdown
+
 # **Distributed Collaboration Platform - Milestone 1 Submission**
 
 **Final Project (Milestone 1) for CS G623 Advanced Operating Systems, Semester I**  
@@ -29,27 +29,20 @@ Install dependencies from `requirements.txt`:
 # It's recommended to use a virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
 pip install -r requirements.txt
-
+```
 
 ### 2. Generate gRPC Code
 ```bash
 python -m grpc_tools.protoc -Iproto --python_out=. --grpc_python_out=. proto/service.proto
-
+```
 ### 3. Run the Services (in Order)
 ```bash
 python run_llm_server.py
 python run_app_server.py
 python run_client.py
-
-### Test Credentials
-
-Use any of the predefined test users:
-Username	Password
-admin	admin123
-user1	password1
-user2	password2
-
-
 ```
+
+
+
+
