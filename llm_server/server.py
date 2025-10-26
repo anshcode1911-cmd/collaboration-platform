@@ -5,7 +5,6 @@ import os
 import time
 import random
 
-# Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import service_pb2
@@ -36,11 +35,9 @@ class LLMServiceServicer(service_pb2_grpc.LLMServiceServicer):
         print(f"  Context:    {request.context}")
         print(f"  Query:      {request.query}")
 
-        # Simulate work
         time.sleep(1)
 
         answer = ""
-        # Handle the test connection query from the app_server
         if request.query == "test connection":
             answer = "LLM Server connection successful."
         else:
